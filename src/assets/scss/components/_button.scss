@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  &:not(:disabled):not(.disabled) {
+      cursor: pointer;
+  }
+
+  &.disabled, &:disabled {
+      opacity: 0.8;
+  }
+}
+
+.btn-icon {
+  background: transparent;
+}

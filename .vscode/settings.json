@@ -1,0 +1,14 @@
+{
+  "eslint.codeActionsOnSave.mode": "all",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "tsconfig.json"
+      ],
+      "url": "https://json.schemastore.org/tsconfig"
+    },
+  ]
+}
