@@ -1,4 +1,4 @@
-import NCrypt from 'ncrypt-js';
+import Cipher from '@/utils/cipher';
 import { createTransform } from 'redux-persist';
 
 const makeError = (message: string) => new Error(`[ReduxPersistEncrypt]: ${message}`);
@@ -16,7 +16,7 @@ export const encryptTransform = (config?: EncryptionConfig, transformConfig?: an
   }
   const onError = typeof config.onError === 'function' ? config.onError : console.warn;
 
-  const cipher = new NCrypt(secretKey)
+  const cipher = new Cipher(secretKey)
   return createTransform(
     (inboundState, _key) => cipher.encrypt(JSON.stringify(inboundState)).toString(),
     (outboundState, _key) => {
