@@ -1,10 +1,11 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore, Reducer } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import rootReducer from "./slices";
 import { encryptTransform } from "./transformer/encrypt";
+import { LocationState } from "./slices/location";
 
-const persistedReducer = persistReducer<RootState>({
+const persistedReducer = persistReducer({
   key: 'root',
   storage,
   transforms: [
@@ -16,7 +17,7 @@ const persistedReducer = persistReducer<RootState>({
       },
     }),
   ],
-}, rootReducer);
+}, rootReducer as Reducer<Partial<{ location: LocationState; }>>);
 
 export const store = configureStore({
   reducer: persistedReducer,
