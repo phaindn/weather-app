@@ -1,0 +1,17 @@
+@mixin tablet {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin mode($m: light) {
+    @media (prefers-color-scheme: $m) {
+        @content;
+    }
+}

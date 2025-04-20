@@ -16,10 +16,17 @@ function renderChunks(deps) {
 }
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, 'env');
+  console.log(`Vite is running in ${mode} mode`);
+  const env = loadEnv(mode, '');
 
+  console.log({env});
   return {
     server: { hmr: true },
+    define: {
+      'process.env': {
+        ...env,
+      }
+    },
     plugins: [
       react({
         include: ['**/*.tsx', '**/*.ts'],
@@ -68,5 +75,6 @@ export default defineConfig(({ mode }) => {
         reporter: ['text', 'json', 'html'],
       },
     },
+
   };
 });

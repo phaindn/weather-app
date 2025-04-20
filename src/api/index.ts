@@ -12,11 +12,11 @@ apiClient.interceptors.request.use(
   (config) => {
     if (!config.params) {
       config.params = {
-        appid: import.meta.env.OPEN_WEATHER_API_KEY,
+        appid: import.meta.env.VITE_OPEN_WEATHER_API_KEY,
       }
     }
     else {
-      config.params.appid = import.meta.env.OPEN_WEATHER_API_KEY;
+      config.params.appid = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
     }
     return config;
   }
