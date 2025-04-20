@@ -1,9 +1,9 @@
 import React from 'react';
 import { RouteObject } from 'react-router-dom';
 import Layout from '@/pages/layout';
-import Main from '@/pages/main';
 import NotFound from '@/pages/NotFound';
-import Search from '@/pages/search';
+import Search from '@/pages/location';
+import HomePage from '@/pages/home';
 
 export default [
   {
@@ -12,7 +12,7 @@ export default [
     children: [
       {
         index: true,
-        element: <Main />
+        element: <HomePage />
       },
       {
         path: 'search',

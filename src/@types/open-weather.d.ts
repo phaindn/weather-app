@@ -11,6 +11,7 @@ namespace OpenWeather {
     lat: number;
     lon: number;
     country: string;
+    state?: string;
   }
 
   interface OneCall3 {
