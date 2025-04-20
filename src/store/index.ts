@@ -4,7 +4,7 @@ import storage from "redux-persist/lib/storage";
 import rootReducer from "./slices";
 import { encryptTransform } from "./transformer/encrypt";
 
-const persistedReducer = persistReducer({
+const persistedReducer = persistReducer<RootState>({
   key: 'root',
   storage,
   transforms: [

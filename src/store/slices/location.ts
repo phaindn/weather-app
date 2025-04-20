@@ -32,4 +32,4 @@ const locationSlice = createSlice({
 })
 
 export const LocationActions = locationSlice.actions;
-export const LocationReduceer = locationSlice.reducer;
+export const LocationReducer = locationSlice.reducer;
