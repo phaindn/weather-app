@@ -13,7 +13,7 @@
     "react",
     "typescript",
     "vite",
-    "redux"
+    "zustand"
   ],
   "author": "Felixx <phaindn@gmail.com>",
   "repository": {
@@ -21,15 +21,13 @@
     "url": "https://github.com/phaindn/weather-app.git"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.6.1",
     "axios": "^1.8.4",
     "classnames": "^2.5.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-icons": "^5.5.0",
-    "react-redux": "^9.2.0",
     "react-router-dom": "6.28.1",
-    "redux-persist": "^6.0.0"
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "17.8.1",
